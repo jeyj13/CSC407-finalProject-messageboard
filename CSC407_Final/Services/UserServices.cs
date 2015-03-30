@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using CSC407_Final.Services;
 
 namespace CSC407_Final.Services
 {
@@ -40,6 +41,7 @@ namespace CSC407_Final.Services
         public void Register(Models.User user)
         {
             user.Password = this.encryptor.Encrypt(user.Password);
+            user.Admin = false;
             this.context.Users.Add(user);
             this.context.SaveChanges();
         }

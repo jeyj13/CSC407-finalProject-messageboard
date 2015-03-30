@@ -1,5 +1,6 @@
 namespace CSC407_Final.Data
 {
+    using CSC407_Final.Models;
     using System;
     using System.Data.Entity;
     using System.Linq;
@@ -15,13 +16,16 @@ namespace CSC407_Final.Data
         public FinalDbContext()
             : base("name=FinalDbContext")
         {
-
+            Database.SetInitializer<FinalDbContext>(new CreateDatabaseIfNotExists<FinalDbContext>());
         }
 
         // Add a DbSet for each entity type that you want to include in your model. For more information 
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 
         // public virtual DbSet<MyEntity> MyEntities { get; set; }
+        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Thread> Threads { get; set; }
+        public virtual DbSet<Comment> Comments { get; set; }
     }
 
     //public class MyEntity

@@ -12,6 +12,7 @@ namespace CSC407_Final.Models
 
         [Key]
         public int threadId { get; set; }
+
         public DateTime postDate { get; set; }
         public string username { get; set; }
         public string title { get; set; }

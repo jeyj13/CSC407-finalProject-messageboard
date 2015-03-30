@@ -10,16 +10,21 @@ namespace CSC407_Final.Models
     public class Comment
     {
 
-        public int threadId { get; set; }
         [Key]
         public int commentId { get; set; }
+
+
+        public int? threadId { get; set; }
+        //public virtual ICollection<User> user { get; set; }
+       // [ForeignKey("username")]
         public string username { get; set; }
         public string comment { get; set; }
         public DateTime timestamp { get; set; }
 
+        
+                
         [ForeignKey("threadId")]
-        [ForeignKey("username")]
-        public virtual User user { get; set; }
         public virtual Thread thread { get; set; }
+        
     }
 }

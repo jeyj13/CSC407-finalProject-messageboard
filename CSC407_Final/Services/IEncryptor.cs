@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSC407_Final.Services
 {
-    interface IEncryptor
+    public interface IEncryptor
     {
         string Encrypt(string input);
     }
