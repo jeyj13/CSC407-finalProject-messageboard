@@ -25,6 +25,11 @@ namespace GenevaShares.Controllers
         [HttpPost]
         public ActionResult Login(LoginViewModel model)
         {
+            if (model.Username == null || model.Password == null)
+            {
+                this.ModelState.AddModelError("", "Missing user input");
+                return View(model);
+            }
             bool isAuthenticated = this.userService.Authenticate(model.Username, model.Password);
             if (isAuthenticated)
             {
@@ -36,6 +41,8 @@ namespace GenevaShares.Controllers
                 this.ModelState.AddModelError("", "Invalid username or password");
                 return View(model);
             }
+
+
         }
 
         public ActionResult Logout()
@@ -58,6 +65,11 @@ namespace GenevaShares.Controllers
             if (exists)
             {
                 this.ModelState.AddModelError("", "Username already exists");
+                return View();
+            }
+            if (user.Username == null || user.Password  == null || user.Email == null)
+            {
+                this.ModelState.AddModelError("", "Missing user input");
                 return View();
             }
             try
