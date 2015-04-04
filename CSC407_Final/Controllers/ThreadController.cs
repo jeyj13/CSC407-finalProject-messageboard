@@ -8,24 +8,25 @@ namespace CSC407_Final.Controllers
 {
     public class ThreadController : Controller
     {
+        //**********************************************************************************
         // GET: Thread
         public ActionResult ThreadList()
         {
             return View();
         }
-
+        //**********************************************************************************
         // GET: Thread/Details/5
         public ActionResult ViewThread(int id)
         {
             return View();
         }
-
+        //**********************************************************************************
         // GET: Thread/Create
         public ActionResult CreateThread()
         {
             return View();
         }
-
+        //**********************************************************************************
         // POST: Thread/Create
         [HttpPost]
         public ActionResult CreateThread(FormCollection collection)
@@ -41,13 +42,13 @@ namespace CSC407_Final.Controllers
                 return View();
             }
         }
-
+        //**********************************************************************************
         // GET: Thread/Edit/5
         public ActionResult EditThread(int id)
         {
             return View();
         }
-
+        //**********************************************************************************
         // POST: Thread/Edit/5
         [HttpPost]
         public ActionResult EditThread(int id, FormCollection collection)
@@ -63,13 +64,13 @@ namespace CSC407_Final.Controllers
                 return View();
             }
         }
-
+        //**********************************************************************************
         // GET: Thread/Delete/5
         public ActionResult DeleteThread(int id)
         {
             return View();
         }
-
+        //**********************************************************************************
         // POST: Thread/Delete/5
         [HttpPost]
         public ActionResult DeleteThread(int id, FormCollection collection)
@@ -85,5 +86,6 @@ namespace CSC407_Final.Controllers
                 return View();
             }
         }
+        //**********************************************************************************
     }
 }

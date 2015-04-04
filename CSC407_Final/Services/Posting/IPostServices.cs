@@ -11,8 +11,11 @@ namespace CSC407_Final.Services.Posting
     {
 
         void CreateThread(Thread thread);
+
         void DeleteThread(Thread thread);
+
         void CreateComment(Comment comment);
+
         void DeleteComment(Comment comment);
 
 

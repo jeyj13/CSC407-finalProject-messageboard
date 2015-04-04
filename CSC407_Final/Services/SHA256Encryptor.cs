@@ -12,8 +12,11 @@ namespace CSC407_Final.Services
         public string Encrypt(string input)
         {
             byte[] bytes = Encoding.UTF8.GetBytes(input);
+
             SHA256 value = SHA256.Create();
+
             byte[] hashedBytes = value.ComputeHash(bytes);
+
             return Convert.ToBase64String(hashedBytes);
         }
     }

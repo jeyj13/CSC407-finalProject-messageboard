@@ -13,15 +13,18 @@ namespace GenevaShares.Controllers
     public class AccountController : Controller
     {
         private IUserServices userService;
+        //********************************************************************************************************
         public AccountController()
         {
             var encryptor = new SHA256Encryptor();
             this.userService = new UserService(encryptor);
         }
+        //*********************************************************************************************************
         public ActionResult Login()
         {
             return View();
         }
+        //*******************************************************************************************************
         [HttpPost]
         public ActionResult Login(LoginViewModel model)
         {
@@ -44,18 +47,19 @@ namespace GenevaShares.Controllers
 
 
         }
-
+        //********************************************************************************************************
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
             return RedirectToAction("Index", "Home");
         }
+        //************************************************************************************************************************
         [HttpGet]
         public ActionResult Register()
         {
             return View("Register");
         }
-
+        //*************************************************************************************************************************
         [HttpPost]
 
         public ActionResult Register(User user)
@@ -83,5 +87,6 @@ namespace GenevaShares.Controllers
             }
             return RedirectToAction("Index", "Home");
         }
+        //*******************************************************************************************************************
     }
 }
