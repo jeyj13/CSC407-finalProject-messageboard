@@ -60,5 +60,11 @@ namespace CSC407_Final.Services
                 return true;
             }
         }
+        public void ToAdmin(Models.User user)
+        {
+            user.Admin = true;
+            this.context.Users.Add(user);
+            this.context.SaveChanges();
+        }
     }
 }

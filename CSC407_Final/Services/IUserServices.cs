@@ -14,5 +14,7 @@ namespace CSC407_Final.Services
         void Register(User user);
 
         bool Exists(string username);
+
+        void ToAdmin(User user);
     }
 }
