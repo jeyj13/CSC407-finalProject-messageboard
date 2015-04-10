@@ -10,7 +10,9 @@ namespace CSC407_Final.Models
     {
         [Key]
         public string Username { get; set; }
+        
         public string Password { get; set; }
+        [DataType(DataType.EmailAddress, ErrorMessage = "Email address is not valid")]
         public string Email { get; set; }
         public bool Admin { get; set; }
 
