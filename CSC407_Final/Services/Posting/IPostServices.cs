@@ -20,7 +20,7 @@ namespace CSC407_Final.Services.Posting
 
         List<Comment> GetComments();
 
-        Comment GetCommentById(int id);
+        
 
         void SaveComment(Comment comment);
 

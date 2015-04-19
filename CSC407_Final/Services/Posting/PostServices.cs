@@ -47,5 +47,27 @@ namespace CSC407_Final.Services.Posting
             this.context.SaveChanges();
         }
         //***********************************************************************************************************
+        public List<Comment> GetComments(int id)
+        {
+            var Comments = this.context.Comments.ToList().Where(x => x.threadId == id).SingleOrDefault();
+
+            return this.context.Comments.ToList();
+        }
+        //***********************************************************************************************************
+        public void SaveComment(Comment comment)
+        {
+            this.context.Comments.Add(comment);
+
+            this.context.SaveChanges();
+        }
+        //***********************************************************************************************************
+        public void DeleteComment(int id)
+        {
+            var comment = this.context.Comments.Where(x => x.commentId == id).SingleOrDefault();
+
+            this.context.Comments.Remove(comment);
+
+            this.context.SaveChanges();
+        }
     }
 }
