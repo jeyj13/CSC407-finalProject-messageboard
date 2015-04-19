@@ -189,6 +189,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Services\Posting\IPostServices.cs" />
+    <Compile Include="Services\Posting\PostServices.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="Models\Thread.cs" />
     <Compile Include="Models\User.cs" />

@@ -10,13 +10,21 @@ namespace CSC407_Final.Services.Posting
     interface IPostServices
     {
 
-        void CreateThread(Thread thread);
+        List<Thread> GetThreads();
 
-        void DeleteThread(Thread thread);
+        Thread GetThreadById(int id);
 
-        void CreateComment(Comment comment);
+        void SaveThread(Thread thread);
 
-        void DeleteComment(Comment comment);
+        void DeleteThread(int id);
+
+        List<Comment> GetComments();
+
+        Comment GetCommentById(int id);
+
+        void SaveComment(Comment comment);
+
+        void DeleteComment(int id);
 
 
         
