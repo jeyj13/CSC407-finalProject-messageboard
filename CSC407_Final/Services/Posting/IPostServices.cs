@@ -18,9 +18,8 @@ namespace CSC407_Final.Services.Posting
 
         void DeleteThread(int id);
 
-        List<Comment> GetComments();
+        List<Comment> GetComments(int id);
 
-        
 
         void SaveComment(Comment comment);
 

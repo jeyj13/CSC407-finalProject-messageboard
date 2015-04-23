@@ -25,6 +25,8 @@ namespace CSC407_Final.Models
                 
         [ForeignKey("threadId")]
         public virtual Thread thread { get; set; }
+        public virtual ICollection<Thread> threads { get; set; }
+        
         
     }
 }

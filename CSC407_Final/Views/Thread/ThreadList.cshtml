@@ -5,9 +5,96 @@
 }
 
 <h2>ThreadList</h2>
+@if (Request.IsAuthenticated)
+{
+    
 
 <p>
     @Html.ActionLink("Create New", "CreateThread")
+</p>
+}
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.postDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.postText)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.username)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+         
+        <td>
+            @Html.DisplayFor(modelItem => item.postDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.postText)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.username)
+        </td>
+        <td>
+@if (Request.IsAuthenticated )
+{
+    @*&& item.username.ToLower() == HttpContext.Current.User.Identity.Name.ToLower()*@
+            @Html.ActionLink("Edit", "Edit", new { id=item.threadId }) 
+    <span>|</span>
+}
+else{
+     }
+                                                                       }
+                                                                       |
+@if (Request.IsAuthenticated)
+{
+            @Html.ActionLink("Details", "ViewThread", new { id=item.threadId })
+}
+else
+{
+    
+}
+|
+@if (Request.IsAuthenticated)
+{
+    
+            @Html.ActionLink("Delete", "Delete", new { id=item.threadId })
+}
+else
+{
+    
+}
+
+
+        </td>
+    </tr>
+
+}
+
+</table>
+@*@model IEnumerable<CSC407_Final.Models.Thread>
+
+@{
+    ViewBag.Title = "ThreadList";
+}
+
+<h2>ThreadList</h2>
+
+<p>
+    @if (Request.IsAuthenticated) {
+        @Html.ActionLink("Create New", "CreateThread")
+}
 </p>
 <table class="table">
     <tr>
@@ -25,25 +112,32 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.user.Username)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.postDate)
-        </td>
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.user.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.postDate)
+            </td>
 
 
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.threadId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.threadId }) |
+            <td>
+                @if (Request.IsAuthenticated && item.user.Username.ToLower() == HttpContext.Current.User.Identity.Name.ToLower())
+{
+
+                    @Html.ActionLink("Edit", "Edit", new { id=item.threadId }) |;
+
+                                                                    @Html.ActionLink("Details", "Details", new { id=item.threadId }) |
+
             @Html.ActionLink("Delete", "Delete", new { id=item.threadId })
-        </td>
-    </tr>
+                }
+            </td>
+        </tr>
 }
 
 </table>
+*@

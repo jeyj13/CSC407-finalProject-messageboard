@@ -18,8 +18,7 @@ namespace CSC407_Final.Models
         public string title { get; set; }
         public string postText { get; set; }
 
-        [ForeignKey("username")]
 
-        public virtual User user { get; set; }
+        public virtual ICollection<Comment> Comments { get; set; }
     }
 }

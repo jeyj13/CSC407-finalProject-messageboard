@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CSC407_Final.Models;
+using CSC407_Final.Services.Posting;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,17 +10,26 @@ namespace CSC407_Final.Controllers
 {
     public class ThreadController : Controller
     {
+        private PostServices postService;
+
+        public ThreadController()
+        {
+            this.postService = new PostServices();
+    }
         //**********************************************************************************
         // GET: Thread
         public ActionResult ThreadList()
         {
-            return View();
+            
+            var threads = this.postService.GetThreads();
+            return View(threads);
         }
         //**********************************************************************************
         // GET: Thread/Details/5
         public ActionResult ViewThread(int id)
         {
-            return View();
+            var thread = this.postService.GetThreadById(id);
+            return RedirectToAction("Comments/", "Comment", thread);
         }
         //**********************************************************************************
         // GET: Thread/Create
@@ -29,13 +40,13 @@ namespace CSC407_Final.Controllers
         //**********************************************************************************
         // POST: Thread/Create
         [HttpPost]
-        public ActionResult CreateThread(FormCollection collection)
+        public ActionResult CreateThread(Thread thread)
         {
             try
             {
-                // TODO: Add insert logic here
+                this.postService.SaveThread(thread);
 
-                return RedirectToAction("Index");
+                return RedirectToAction("ThreadList");
             }
             catch
             {

@@ -176,15 +176,20 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CommentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ThreadController.cs" />
     <Compile Include="Data\FinalDbContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201503271804427_Initial.cs" />
-    <Compile Include="Migrations\201503271804427_Initial.Designer.cs">
-      <DependentUpon>201503271804427_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201504222050243_fifth.cs" />
+    <Compile Include="Migrations\201504222050243_fifth.Designer.cs">
+      <DependentUpon>201504222050243_fifth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201504222147401_sixth.cs" />
+    <Compile Include="Migrations\201504222147401_sixth.Designer.cs">
+      <DependentUpon>201504222147401_sixth.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Comment.cs" />
@@ -237,7 +242,9 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Thread\CreateThread.cshtml" />
     <Content Include="Views\Thread\ThreadList.cshtml" />
+    <Content Include="Views\Comment\Comments.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -250,8 +257,11 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201503271804427_Initial.resx">
-      <DependentUpon>201503271804427_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201504222050243_fifth.resx">
+      <DependentUpon>201504222050243_fifth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504222147401_sixth.resx">
+      <DependentUpon>201504222147401_sixth.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
