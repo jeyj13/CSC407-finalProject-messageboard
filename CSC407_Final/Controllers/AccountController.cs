@@ -37,6 +37,7 @@ namespace GenevaShares.Controllers
             if (isAuthenticated)
             {
                 FormsAuthentication.SetAuthCookie(model.Username, true);
+                //FormsAuthentication.Role
                 return RedirectToAction("Index", "Home");
             }
             else

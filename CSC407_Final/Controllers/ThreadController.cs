@@ -88,7 +88,7 @@ namespace CSC407_Final.Controllers
         {
             try
             {
-                // TODO: Add delete logic here
+                this.postService.DeleteThread(id);
 
                 return RedirectToAction("Index");
             }

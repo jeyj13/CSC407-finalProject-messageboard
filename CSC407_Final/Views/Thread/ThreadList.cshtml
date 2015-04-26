@@ -47,7 +47,7 @@
             @Html.DisplayFor(modelItem => item.username)
         </td>
         <td>
-@if (Request.IsAuthenticated )
+@if (Request.IsAuthenticated && item.username.ToLower() == HttpContext.Current.User.Identity.Name.ToLower())
 {
     @*&& item.username.ToLower() == HttpContext.Current.User.Identity.Name.ToLower()*@
             @Html.ActionLink("Edit", "Edit", new { id=item.threadId }) 
@@ -55,21 +55,17 @@
 }
 else{
      }
-                                                                       }
-                                                                       |
-@if (Request.IsAuthenticated)
-{
+                                                                       
+
             @Html.ActionLink("Details", "ViewThread", new { id=item.threadId })
-}
-else
-{
     
-}
-|
-@if (Request.IsAuthenticated)
+
+
+@if (Request.IsAuthenticated && item.username.ToLower() == HttpContext.Current.User.Identity.Name.ToLower() || HttpContext.Current.User.IsInRole("Admin"))
 {
+    <span>|</span>
     
-            @Html.ActionLink("Delete", "Delete", new { id=item.threadId })
+            @Html.ActionLink("Delete", "DeleteThread", new { id=item.threadId })
 }
 else
 {

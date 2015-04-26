@@ -1,23 +1,29 @@
 ﻿@model IEnumerable<CSC407_Final.Models.Comment>
 
 @{
-    ViewBag.Title = "Comments";
+    ViewBag.Title = "Comments for " + Request["title"];
 }
 
-<h2>Comments</h2>
+<h2>Comments for @Request["title"]</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-
+<p>
+    @Html.Label(Request["username"])  posted:
+</p>
 <p>
     
     @{
-        @Html.Label(Request["postDate"]);
-       @Html.Label(Request["postText"]);
+       // @Html.Partial("_OP", thread);
+       
+       @Html.Label(Request["postText"])
+                                       
     }
 
 </p>
+<p>@Html.Label(Request["postDate"])</p>
+
 <table class="table">
     <tr>
         <th>

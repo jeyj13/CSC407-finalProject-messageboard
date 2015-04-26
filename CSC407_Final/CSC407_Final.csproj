@@ -179,6 +179,7 @@
     <Compile Include="Controllers\CommentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ThreadController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Data\FinalDbContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -195,6 +196,7 @@
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Services\Posting\IPostServices.cs" />
     <Compile Include="Services\Posting\PostServices.cs" />
+    <Compile Include="ViewModels\CommentViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="Models\Thread.cs" />
     <Compile Include="Models\User.cs" />
@@ -245,6 +247,14 @@
     <Content Include="Views\Thread\CreateThread.cshtml" />
     <Content Include="Views\Thread\ThreadList.cshtml" />
     <Content Include="Views\Comment\Comments.cshtml" />
+    <Content Include="Views\Thread\DeleteThread.cshtml" />
+    <Content Include="Views\Comment\_OP.cshtml" />
+    <Content Include="Views\Comment\CreateComment.cshtml" />
+    <Content Include="Views\Comment\DeleteComment.cshtml" />
+    <Content Include="Views\User\Users.cshtml" />
+    <Content Include="Views\User\DeleteUser.cshtml" />
+    <Content Include="Views\User\ElevateUser.cshtml" />
+    <Content Include="Views\User\DemoteUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
