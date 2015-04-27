@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace CSC407_Final.Controllers
 {
@@ -25,16 +26,12 @@ namespace CSC407_Final.Controllers
             return View(threads);
         }
         //**********************************************************************************
-        // GET: Thread/Details/5
-        public ActionResult ViewThread(int id)
-        {
-            var thread = this.postService.GetThreadById(id);
-            return RedirectToAction("Comments/", "Comment", thread);
-        }
+
         //**********************************************************************************
         // GET: Thread/Create
         public ActionResult CreateThread()
         {
+            
             return View();
         }
         //**********************************************************************************

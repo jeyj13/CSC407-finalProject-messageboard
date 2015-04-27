@@ -1,72 +1,26 @@
-﻿@model IEnumerable<CSC407_Final.Models.Comment>
+﻿@model CSC407_Final.ViewModels.CommentViewModel
 
 @{
-    ViewBag.Title = "Comments for " + Request["title"];
+    ViewBag.Title = "Comments";
 }
 
-<h2>Comments for @Request["title"]</h2>
+<h2>Comments</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<p>
-    @Html.Label(Request["username"])  posted:
-</p>
-<p>
-    
-    @{
-       // @Html.Partial("_OP", thread);
-       
-       @Html.Label(Request["postText"])
-                                       
+<div>
+    <h4>CommentViewModel</h4>
+    <hr />
+
+    <h2>@Model.Thread.postText</h2>
+
+
+
+    @foreach (var comment in Model.Comments)
+    {
+        <div>@comment.comment</div>
     }
 
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
 </p>
-<p>@Html.Label(Request["postDate"])</p>
-
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.thread.username)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.thread.postText)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.username)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.comment)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.timestamp)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.thread.username)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.thread.postText)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.username)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.comment)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.timestamp)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.commentId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.commentId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.commentId })
-        </td>
-    </tr>
-}
-
-</table>

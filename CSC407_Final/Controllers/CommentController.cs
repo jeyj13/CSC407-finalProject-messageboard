@@ -21,37 +21,33 @@ namespace CSC407_Final.Controllers
     }
         //*************
         // GET: Comment
-        public ActionResult Comments(Thread thread)
+        public ActionResult Comments(int id)
         {
-            var details = this.postService.GetComments(thread.threadId);
+            
             var OP = new CommentViewModel();
-           // OP = this.postService.GetThreadById(thread.threadId);
-
+            OP.Thread = this.postService.GetThreadById(id);
+            OP.Comments = this.postService.GetComments(id);
           //  return View("_OP", details);
-            return View(details);
+            return View(OP);
         }
 
-        // GET: Comment/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
+
 
         // GET: Comment/Create
-        public ActionResult Create()
+        public ActionResult CreateComment()
         {
             return View();
         }
 
         // POST: Comment/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Comment comment)
         {
             try
             {
-                // TODO: Add insert logic here
+                this.postService.SaveComment(comment);
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Thread/ThreadList");
             }
             catch
             {
@@ -67,11 +63,11 @@ namespace CSC407_Final.Controllers
 
         // POST: Comment/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, Comment comment)
         {
             try
             {
-                // TODO: Add update logic here
+                this.postService.SaveComment(comment);
 
                 return RedirectToAction("Index");
             }
@@ -82,18 +78,18 @@ namespace CSC407_Final.Controllers
         }
 
         // GET: Comment/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult DeleteComment(int id)
         {
             return View();
         }
 
         // POST: Comment/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int id, Comment comment)
         {
             try
             {
-                // TODO: Add delete logic here
+                this.postService.DeleteComment(id);
 
                 return RedirectToAction("Index");
             }

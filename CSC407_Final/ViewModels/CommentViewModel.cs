@@ -8,8 +8,8 @@ namespace CSC407_Final.ViewModels
 {
     public class CommentViewModel
     {
-        public IList<Comment> Comments {get; set;}
-        public IList<Thread> Threads { get; set; }
+        public List<Comment> Comments {get; set;}
+        public Thread Thread { get; set; }
 
     }
 }

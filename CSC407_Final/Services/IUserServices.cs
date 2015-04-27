@@ -16,5 +16,11 @@ namespace CSC407_Final.Services
         bool Exists(string username);
 
         void ToAdmin(User user);
+
+        List<User> GetUsers();
+
+        void EnableAdmin(string username);
+
+        void FromAdmin(User user);
     }
 }
