@@ -34,15 +34,22 @@ namespace CSC407_Final.Controllers
 
 
         // GET: Comment/Create
-        public ActionResult CreateComment()
+        public ActionResult CreateComment(int id)
         {
+            
             return View();
         }
 
         // POST: Comment/Create
         [HttpPost]
-        public ActionResult Create(Comment comment)
+        public ActionResult CreateComment(FormCollection collection)
         {
+
+            Comment comment = new Comment();
+            comment.username = collection["username"];
+            comment.comment = collection["comment"];
+            comment.threadId = Convert.ToInt32(Request["threadId"]);
+
             try
             {
                 this.postService.SaveComment(comment);

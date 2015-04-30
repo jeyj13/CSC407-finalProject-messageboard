@@ -43,7 +43,7 @@ namespace CSC407_Final.Controllers
             {
                 this.postService.SaveThread(thread);
 
-                return RedirectToAction("ThreadList");
+                return RedirectToAction("Thread/ThreadList/");
             }
             catch
             {

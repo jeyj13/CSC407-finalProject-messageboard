@@ -9,18 +9,24 @@
 <div>
     <h4>CommentViewModel</h4>
     <hr />
+    <p>@Model.Thread.username posted:</p>
+    <h3>@Model.Thread.postText</h3>
+    <p>@Model.Thread.postDate </p>
 
-    <h2>@Model.Thread.postText</h2>
 
-
-
+    @Html.ActionLink("Create", "CreateComment",new { id=Model.Thread.threadId}))
     @foreach (var comment in Model.Comments)
     {
+        <div>@comment.username</div>
         <div>@comment.comment</div>
+         <div>@comment.timestamp</div>
+
+    if (Request.IsAuthenticated && comment.username.ToLower() == HttpContext.Current.User.Identity.Name.ToLower() || Roles.IsUserInRole("administrator"))
+    {
+        @Html.ActionLink("Delete", "DeleteComment", new { id=comment.threadId }) <span>|</span>
+    }
+    @Html.ActionLink("Back to List", "Thread/ThreadList")
     }
 
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+

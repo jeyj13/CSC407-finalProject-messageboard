@@ -58,6 +58,7 @@ namespace CSC407_Final.Services.Posting
         //***********************************************************************************************************
         public void SaveComment(Comment comment)
         {
+            comment.timestamp = DateTime.Now;
             this.context.Comments.Add(comment);
 
             this.context.SaveChanges();
