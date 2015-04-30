@@ -34,7 +34,7 @@ namespace CSC407_Final.Controllers
 
 
         // GET: Comment/Create
-        public ActionResult CreateComment(int id)
+        public ActionResult CreateComment()
         {
             
             return View();
@@ -48,7 +48,7 @@ namespace CSC407_Final.Controllers
             Comment comment = new Comment();
             comment.username = collection["username"];
             comment.comment = collection["comment"];
-            comment.threadId = Convert.ToInt32(Request["threadId"]);
+            
 
             try
             {

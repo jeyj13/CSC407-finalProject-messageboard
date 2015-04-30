@@ -14,7 +14,10 @@
     <p>@Model.Thread.postDate </p>
 
 
-    @Html.ActionLink("Create", "CreateComment",new { id=Model.Thread.threadId}))
+@if (Request.IsAuthenticated)
+{
+    @Html.ActionLink("Create", "CreateComment", Model.Thread)
+}
     @foreach (var comment in Model.Comments)
     {
         <div>@comment.username</div>
