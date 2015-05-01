@@ -20,13 +20,22 @@
 }
     @foreach (var comment in Model.Comments)
     {
-        <div>@comment.username</div>
+        if(comment.threadId == Model.Thread.threadId)
+        { 
+
+        <div>@comment.username posted:</div>
         <div>@comment.comment</div>
          <div>@comment.timestamp</div>
+        
+        <div>__________________________________________________________________________________</div>
+    
+    
 
     if (Request.IsAuthenticated && comment.username.ToLower() == HttpContext.Current.User.Identity.Name.ToLower() || Roles.IsUserInRole("administrator"))
     {
         @Html.ActionLink("Delete", "DeleteComment", new { id=comment.threadId }) <span>|</span>
+    }
+    }
     }
     @Html.ActionLink("Back to List", "Thread/ThreadList")
     }

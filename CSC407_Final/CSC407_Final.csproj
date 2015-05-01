@@ -247,13 +247,13 @@
     <Content Include="Views\Thread\CreateThread.cshtml" />
     <Content Include="Views\Thread\ThreadList.cshtml" />
     <Content Include="Views\Thread\DeleteThread.cshtml" />
-    <Content Include="Views\Comment\CreateComment.cshtml" />
     <Content Include="Views\Comment\DeleteComment.cshtml" />
     <Content Include="Views\User\Users.cshtml" />
     <Content Include="Views\User\DeleteUser.cshtml" />
     <Content Include="Views\User\ElevateUser.cshtml" />
     <Content Include="Views\User\DemoteUser.cshtml" />
     <Content Include="Views\Comment\Comments.cshtml" />
+    <Content Include="Views\Comment\CreateComment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

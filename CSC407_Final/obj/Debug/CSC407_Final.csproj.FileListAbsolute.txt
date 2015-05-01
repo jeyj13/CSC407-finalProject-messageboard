@@ -7,6 +7,8 @@ C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin
 C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin\Microsoft.AspNet.Identity.Core.dll
 C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
 C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin\Microsoft.Owin.dll
 C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin\Microsoft.Owin.Host.SystemWeb.dll
 C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin\Microsoft.Owin.Security.Cookies.dll
@@ -30,6 +32,8 @@ C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin
 C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin\System.Web.WebPages.Razor.dll
 C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin\Unity.Mvc5.dll
 C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin\WebGrease.dll
+C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
 C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin\Microsoft.Practices.Unity.xml
 C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin\Microsoft.Practices.Unity.Configuration.xml
 C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin\System.Web.Helpers.xml
@@ -55,13 +59,8 @@ C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin
 C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\obj\Debug\CSC407_Final.Migrations.fifth.resources
+C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\obj\Debug\CSC407_Final.Migrations.sixth.resources
+C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\obj\Debug\CSC407_Final.csproj.GenerateResource.Cache
 C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\obj\Debug\CSC407_Final.dll
 C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\obj\Debug\CSC407_Final.pdb
-C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\obj\Debug\CSC407_Final.csprojResolveAssemblyReference.cache
-C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin\Microsoft.AspNet.SignalR.Core.dll
-C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
-C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin\Microsoft.AspNet.SignalR.Core.xml
-C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
-C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\obj\Debug\CSC407_Final.Migrations.fifth.resources
-C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\obj\Debug\CSC407_Final.csproj.GenerateResource.Cache
-C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\obj\Debug\CSC407_Final.Migrations.sixth.resources

@@ -50,7 +50,7 @@ namespace CSC407_Final.Services.Posting
         //***********************************************************************************************************
         public List<Comment> GetComments(int id)
         {
-            var Comments = this.context.Comments.ToList().Where(x => x.threadId == id).SingleOrDefault();
+            var Comments = this.context.Comments.ToList().Where(x => x.threadId == id);
            // var Threads = this.context.Threads.ToList().Where(x => x.threadId == id).SingleOrDefault();
 
             return this.context.Comments.ToList();

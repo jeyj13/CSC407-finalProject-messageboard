@@ -34,7 +34,7 @@ namespace CSC407_Final.Controllers
 
 
         // GET: Comment/Create
-        public ActionResult CreateComment()
+        public ActionResult CreateComment(Thread thread)
         {
             
             return View();
@@ -46,15 +46,16 @@ namespace CSC407_Final.Controllers
         {
 
             Comment comment = new Comment();
-            comment.username = collection["username"];
-            comment.comment = collection["comment"];
+            comment.username = HttpContext.User.Identity.Name;
+            comment.comment = Request.Form["Comment.comment"];
+            comment.threadId = Convert.ToInt32(Request.Form["Comment.threadId"]);
             
 
             try
             {
                 this.postService.SaveComment(comment);
 
-                return RedirectToAction("Thread/ThreadList");
+                return View("Thread/ThreadList");
             }
             catch
             {
@@ -92,7 +93,7 @@ namespace CSC407_Final.Controllers
 
         // POST: Comment/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, Comment comment)
+        public ActionResult DeleteComment(int id, Comment comment)
         {
             try
             {

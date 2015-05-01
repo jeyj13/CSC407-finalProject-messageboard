@@ -10,6 +10,7 @@ namespace CSC407_Final.ViewModels
     {
         public List<Comment> Comments {get; set;}
         public Thread Thread { get; set; }
+        public Comment Comment { get; set; }
 
     }
 }
