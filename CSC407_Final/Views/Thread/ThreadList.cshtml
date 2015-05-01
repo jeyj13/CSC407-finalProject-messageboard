@@ -8,7 +8,16 @@
 @if (Request.IsAuthenticated)
 {
     
+    <p>
+        <div class="form-group">
+            @Html.TextBox("search")
+            @Html.ActionLink("Search", "FoundThread")
+            </div>
+        
+        
 
+        
+    </p>
 <p>
     @Html.ActionLink("Create New", "CreateThread")
 </p>

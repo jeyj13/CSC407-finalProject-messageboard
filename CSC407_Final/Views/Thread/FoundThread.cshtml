@@ -1,0 +1,51 @@
+﻿@model IEnumerable<CSC407_Final.Models.Thread>
+
+@{
+    ViewBag.Title = "FoundThread";
+}
+
+<h2>FoundThread</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.postDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.postText)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.postDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.postText)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.threadId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.threadId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.threadId })
+        </td>
+    </tr>
+}
+
+</table>

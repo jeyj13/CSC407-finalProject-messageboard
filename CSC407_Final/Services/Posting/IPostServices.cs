@@ -12,6 +12,7 @@ namespace CSC407_Final.Services.Posting
 
         List<Thread> GetThreads();
 
+        Thread GetThreadByTitle(string title);
         Thread GetThreadById(int id);
 
         void SaveThread(Thread thread);
