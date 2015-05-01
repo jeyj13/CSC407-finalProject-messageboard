@@ -17,8 +17,11 @@ namespace CSC407_Final.Models
         public int? threadId { get; set; }
         //public virtual ICollection<User> user { get; set; }
        // [ForeignKey("username")]
+        [Display(Name = "Username")]
         public string username { get; set; }
+        [Display(Name = "Comment")]
         public string comment { get; set; }
+        [Display(Name = "Date")]
         public DateTime timestamp { get; set; }
 
         

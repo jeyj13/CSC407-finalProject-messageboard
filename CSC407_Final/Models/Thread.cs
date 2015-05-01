@@ -12,10 +12,13 @@ namespace CSC407_Final.Models
 
         [Key]
         public int threadId { get; set; }
-
+        [Display(Name="Date")]
         public DateTime postDate { get; set; }
+        [Display(Name = "Username")]
         public string username { get; set; }
+        [Display(Name = "Title")]
         public string title { get; set; }
+        [Display(Name = "Body")]
         public string postText { get; set; }
 
 

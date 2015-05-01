@@ -25,12 +25,15 @@ namespace CSC407_Final.Controllers
             var threads = this.postService.GetThreads();
             return View(threads);
         }
-        public ActionResult FoundThread(string title)
-        {
 
-            var thread = this.postService.GetThreadByTitle(title);
+        [HttpPost]
+        public ActionResult ThreadList(FormCollection form)
+        {
+            var thread = this.postService.GetThreadByTitle(Request.Form["search"]);
             return View(thread);
         }
+
+
         //**********************************************************************************
 
         //**********************************************************************************

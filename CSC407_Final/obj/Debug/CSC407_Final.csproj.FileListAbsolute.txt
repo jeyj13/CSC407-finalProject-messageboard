@@ -1,3 +1,6 @@
+C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\obj\Debug\CSC407_Final.Migrations.fifth.resources
+C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\obj\Debug\CSC407_Final.Migrations.sixth.resources
+C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\obj\Debug\CSC407_Final.csproj.GenerateResource.Cache
 C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin\CSC407_Final.dll.config
 C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin\CSC407_Final.dll
 C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin\CSC407_Final.pdb
@@ -59,9 +62,5 @@ C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin
 C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\obj\Debug\CSC407_Final.Migrations.fifth.resources
-C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\obj\Debug\CSC407_Final.Migrations.sixth.resources
-C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\obj\Debug\CSC407_Final.csproj.GenerateResource.Cache
 C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\obj\Debug\CSC407_Final.dll
 C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\obj\Debug\CSC407_Final.pdb
-C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\obj\Debug\CSC407_Final.csprojResolveAssemblyReference.cache

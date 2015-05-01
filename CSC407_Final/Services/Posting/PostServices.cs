@@ -19,15 +19,15 @@ namespace CSC407_Final.Services.Posting
         //**********************************************************************************************************
         public List<Thread> GetThreads()
             {
-                var Threads = this.context.Threads.OrderBy(x => x.postDate).ToList();
+                var Threads = this.context.Threads.OrderByDescending(x => x.postDate).ToList();
 
                 return this.context.Threads.OrderBy(x => x.postDate).ToList();
             }
         //**********************************************************************************************************
-        public Thread GetThreadByTitle(string title)
+        public List<Thread> GetThreadByTitle(string title)
         {
-
-            return this.context.Threads.Where(x => x.title == title).SingleOrDefault();
+            var Threads = this.context.Threads.Where(x => x.title.Contains(title)).ToList();
+            return this.context.Threads.Where(x => x.title.Contains(title)).ToList();
 
         }
         public Thread GetThreadById(int id)

@@ -7,12 +7,15 @@
 <h2>Thread List</h2>
 @if (Request.IsAuthenticated)
 {
-    
+
     <p>
-        <div class="form-group">
-            @Html.TextBox("search")
-            @Html.ActionLink("Search", "FoundThread")
-            </div>
+        @using (Html.BeginForm())
+        {
+        <p>
+            Search by Title: @Html.TextBox("search") <br />
+            <input type="submit" value="Filter" class="btn btn-danger" />
+        </p>
+        } 
         
         
 
