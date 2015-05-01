@@ -64,3 +64,4 @@ C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\obj
 C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\obj\Debug\CSC407_Final.csproj.GenerateResource.Cache
 C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\obj\Debug\CSC407_Final.dll
 C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\obj\Debug\CSC407_Final.pdb
+C:\Users\Jey\Documents\Visual Studio 2013\Projects\CSC407_Final\CSC407_Final\obj\Debug\CSC407_Final.csprojResolveAssemblyReference.cache

@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<CSC407_Final.Models.Thread>
 
 @{
-    ViewBag.Title = "ThreadList";
+    ViewBag.Title = "Thread List";
 }
 
-<h2>ThreadList</h2>
+<h2>Thread List</h2>
 @if (Request.IsAuthenticated)
 {
     
@@ -50,7 +50,7 @@
 @if (Request.IsAuthenticated && item.username.ToLower() == HttpContext.Current.User.Identity.Name.ToLower() || Roles.IsUserInRole("administrator"))
 {
     
-            @Html.ActionLink("Edit", "Edit", new { id=item.threadId }) 
+            @Html.ActionLink("Edit", "EditThread", new { id=item.threadId }) 
     <span>|</span>
 }
 else{

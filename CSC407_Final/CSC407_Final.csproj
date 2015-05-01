@@ -254,6 +254,7 @@
     <Content Include="Views\User\DemoteUser.cshtml" />
     <Content Include="Views\Comment\Comments.cshtml" />
     <Content Include="Views\Comment\CreateComment.cshtml" />
+    <Content Include="Views\Thread\EditThread.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
