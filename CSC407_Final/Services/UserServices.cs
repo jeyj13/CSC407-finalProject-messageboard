@@ -80,9 +80,11 @@ namespace CSC407_Final.Services
             }
         }
 //***************************************************************************************************************************
-        public void ToAdmin(Models.User user)
+        public void ToAdmin(User user)
         {
             user.Admin = true;
+            this.context.Users.Remove(user);
+            this.context.SaveChanges();
             this.context.Users.Add(user);
             this.context.SaveChanges();
         }
@@ -113,7 +115,8 @@ namespace CSC407_Final.Services
         //************************************************************************************************************************
         public void FromAdmin(Models.User user)
         {
-            user.Admin = false;
+            this.context.Users.Remove(user);
+            this.context.SaveChanges();
             this.context.Users.Add(user);
             this.context.SaveChanges();
         }
