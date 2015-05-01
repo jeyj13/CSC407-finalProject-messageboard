@@ -12,6 +12,7 @@ namespace CSC407_Final.Services
         bool Authenticate(string username, string password);
 
         void Register(User user);
+        void Delete(User user);
 
         bool Exists(string username);
 

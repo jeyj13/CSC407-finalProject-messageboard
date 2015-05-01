@@ -26,7 +26,13 @@ namespace CSC407_Final.Services
 
             this.context = new FinalDbContext();
         }
+        public User GetUserById(string username)
+        {
 
+            // var Threads = this.context.Threads.ToList().Where(x => x.threadId == id).SingleOrDefault();
+
+            return this.context.Users.ToList().Where(x => x.Username == username).SingleOrDefault();
+        }
 
 //************************************************************************************************************************
         public bool Authenticate(string username, string password)
@@ -112,5 +118,13 @@ namespace CSC407_Final.Services
             this.context.SaveChanges();
         }
         //************************************************************************************************************************
+        public void Delete(User user)
+        {
+            var validated = this.context.Users.Where(x => x.Username == user.Username).SingleOrDefault();
+
+            this.context.Users.Remove(validated);
+
+            this.context.SaveChanges();
+        }
     }
 }

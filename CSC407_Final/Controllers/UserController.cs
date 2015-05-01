@@ -29,20 +29,22 @@ namespace CSC407_Final.Controllers
 
 
         // GET: User/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult DeleteUser(string id)
         {
+            var user = this.userservices.GetUserById(Request.Form["Username"]);
             return View();
         }
 
         // POST: User/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult DeleteUser(string id, FormCollection collection)
         {
             try
             {
-                // TODO: Add delete logic here
+                var user = this.userservices.GetUserById(id);
+                this.userservices.Delete(user);
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Users");
             }
             catch
             {

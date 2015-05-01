@@ -55,7 +55,7 @@ namespace CSC407_Final.Controllers
             {
                 this.postService.SaveComment(comment);
 
-                return RedirectToAction("~Views/Thread/ThreadList");
+                return RedirectToAction("Comments/" + comment.threadId);
             }
             catch
             {
@@ -77,7 +77,7 @@ namespace CSC407_Final.Controllers
             {
                 this.postService.SaveComment(comment);
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Comments/"+comment.threadId);
             }
             catch
             {
@@ -99,7 +99,7 @@ namespace CSC407_Final.Controllers
             {
                 this.postService.DeleteComment(id);
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Comments/"+comment.threadId);
             }
             catch
             {
