@@ -31,9 +31,15 @@
         <td>
             @if(Roles.IsUserInRole("administrator"))
             {
+                if(item.Admin == false)
+                { 
             @Html.ActionLink("Make Admin", "ElevateUser", new { id=item.Username }) <span>|</span>
+                @Html.ActionLink("Delete User", "DeleteUser", new { id = item.Username })
+                }
+                else { 
             @Html.ActionLink("Demote", "DemoteUser", new { id = item.Username })    <span>|</span>
             @Html.ActionLink("Delete User", "DeleteUser", new { id=item.Username })
+            }
             }
         </td>
     </tr>

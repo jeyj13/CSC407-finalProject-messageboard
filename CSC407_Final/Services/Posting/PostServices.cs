@@ -49,8 +49,11 @@ namespace CSC407_Final.Services.Posting
         public void DeleteThread(int id)
         {
             var thread = this.context.Threads.Where(x => x.threadId == id).SingleOrDefault();
+            var comments = this.context.Comments.Where(x => x.threadId == id);
 
             this.context.Threads.Remove(thread);
+            this.context.Comments.RemoveRange(comments);
+            
 
             this.context.SaveChanges();
         }

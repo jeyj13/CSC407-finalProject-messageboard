@@ -55,7 +55,7 @@ namespace CSC407_Final.Controllers
             {
                 this.postService.SaveComment(comment);
 
-                return View("Thread/ThreadList");
+                return RedirectToAction("~Views/Thread/ThreadList");
             }
             catch
             {

@@ -1,5 +1,6 @@
 ﻿using CSC407_Final.Models;
 using CSC407_Final.Services.Posting;
+using CSC407_Final.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,7 +53,7 @@ namespace CSC407_Final.Controllers
             {
                 this.postService.SaveThread(thread);
 
-                return RedirectToAction("Thread/ThreadList/");
+                return RedirectToAction("ThreadList");
             }
             catch
             {
@@ -74,7 +75,7 @@ namespace CSC407_Final.Controllers
             {
                 // TODO: Add update logic here
 
-                return RedirectToAction("Index");
+                return RedirectToAction("ThreadList");
             }
             catch
             {
@@ -85,7 +86,10 @@ namespace CSC407_Final.Controllers
         // GET: Thread/Delete/5
         public ActionResult DeleteThread(int id)
         {
-            return View();
+            var OP = new CommentViewModel();
+            OP.Thread = this.postService.GetThreadById(id);
+            OP.Comments = this.postService.GetComments(id);
+            return View(OP);
         }
         //**********************************************************************************
         // POST: Thread/Delete/5
@@ -95,8 +99,9 @@ namespace CSC407_Final.Controllers
             try
             {
                 this.postService.DeleteThread(id);
+                
 
-                return RedirectToAction("Index");
+                return RedirectToAction("ThreadList");
             }
             catch
             {
